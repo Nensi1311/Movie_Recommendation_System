@@ -11,6 +11,8 @@ Title
 Tags
 These features are used to calculate similarities between movies.
 
+Dataset: https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+
 ## Techniques Used
 1. Count Vectorization:
 Converts text data (such as plot summaries or genres) into a matrix of token counts.
