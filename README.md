@@ -6,9 +6,9 @@ Given a movie title, the system identifies similar movies based on their plot de
 ## Dataset
 The dataset used for this project contains metadata about movies such as:
 
-Movie Id
-Title
-Tags
+- Movie Id
+- Title
+- Tags
 These features are used to calculate similarities between movies.
 
 Dataset: https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
