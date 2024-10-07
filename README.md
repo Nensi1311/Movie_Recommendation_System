@@ -9,6 +9,7 @@ The dataset used for this project contains metadata about movies such as:
 - Movie Id
 - Title
 - Tags
+
 These features are used to calculate similarities between movies.
 
 Dataset: https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
