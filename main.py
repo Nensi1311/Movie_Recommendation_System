@@ -14,6 +14,12 @@ credits.head()
 Movies.describe()
 credits.describe()
 
+Movies.isnull().sum()
+credits.isnull().sum()
+
+Movies.info()
+credits.info()
+
 # EDA 
 movies = Movies.merge(credits, on = "title")
 movies
@@ -95,26 +101,3 @@ new_df.head()
 new_df["tags"][0]
 new_df["tags"] = new_df["tags"].apply(lambda x : x.lower())
 new_df.head()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Movies.isnull().sum()
-credits.isnull().sum()
-
-Movies.info()
-credits.info()
