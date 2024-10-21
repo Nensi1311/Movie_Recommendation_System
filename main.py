@@ -55,7 +55,24 @@ def convert_2(obj):
         else:
             break
     return l   
+movies["cast"] = movies["cast"].apply(convert_2)
+movies.head()
 
+def fetch_director(obj):
+    l = []
+    for i in ast.literal_eval(obj):
+        if i["job"] == "Director":
+            l.append(i["name"])
+            break
+    return l 
+movies["crew"] = movies["crew"].apply(fetch_director)   
+movies.head()
+
+movies["overview"] = movies["overview"].apply(lambda x : x.split())
+movies.head()
+
+movies["genres"] = movies["genres"].apply(lambda x : [i.replace(" ","") for i in x])
+movies.head()
 
 
 
