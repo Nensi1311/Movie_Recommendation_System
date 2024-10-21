@@ -74,7 +74,17 @@ movies.head()
 movies["genres"] = movies["genres"].apply(lambda x : [i.replace(" ","") for i in x])
 movies.head()
 
+movies["keywords"] = movies["keywords"].apply(lambda x : [i.replace(" ","") for i in x])
+movies.head()
 
+movies["cast"] = movies["cast"].apply(lambda x : [i.replace(" ","") for i in x])
+movies.head()
+
+movies["crew"] = movies["crew"].apply(lambda x : [i.replace(" ","") for i in x])
+movies.head()
+
+movies["tags"] = movies["overview"] + movies["genres"] + movies["keywords"] + movies["cast"] + movies["crew"]
+movies.head()
 
 
 
