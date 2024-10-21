@@ -86,6 +86,13 @@ movies.head()
 movies["tags"] = movies["overview"] + movies["genres"] + movies["keywords"] + movies["cast"] + movies["crew"]
 movies.head()
 
+new_df = movies[["movie_id", "title", "tags"]]
+new_df
+new_df["tags"] = new_df["tags"].apply(lambda x : " ".join(x))
+new_df.head()
+new_df["tags"][0]
+new_df["tags"] = new_df["tags"].apply(lambda x : x.lower())
+new_df.head()
 
 
 
