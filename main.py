@@ -34,6 +34,27 @@ movies.isnull().sum()
 movies.duplicated().sum()
 movies.iloc[0].genres
 
+import ast
+def convert(obj):
+    l = []
+    for i in ast.literal_eval(obj):
+        l.append(i["name"])
+    return l    
+movies["genres"] = movies["genres"].apply(convert)
+movies.head()
+movies["keywords"] = movies["keywords"].apply(convert)
+movies.head()
+
+def convert_2(obj):
+    l = []
+    counter = 0
+    for i in ast.literal_eval(obj):
+        if counter != 3:
+            l.append(i["name"])
+            counter += 1
+        else:
+            break
+    return l   
 
 
 
